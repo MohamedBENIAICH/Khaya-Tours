@@ -39,7 +39,59 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.sliders.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Slider') }}
+                    </p>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="{{ route('admin.destinations.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Destination') }}
+                    </p>
+                </a>
+            </li>
 
+            <li class="nav-item">
+                <a href="{{ route('admin.testimonials.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Testimonial') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('admin.settings.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Setting') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('admin.email.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Email') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('admin.images.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Destination\'s Images') }}
+                    </p>
+                </a>
+            </li>
         </ul>
     </nav>
     <!-- /.sidebar-menu -->

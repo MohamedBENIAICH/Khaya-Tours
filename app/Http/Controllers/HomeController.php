@@ -2,19 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use Illuminate\Http\Request;
+use App\Models\Slider;
+use App\Models\Testimonial;
+use Symfony\Component\Console\Descriptor\Descriptor;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -23,6 +19,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $sliders = Slider::latest()->get();
+        $destinations = Destination::latest()->get();
+        $testimonials = Testimonial::latest()->get();
+        return view('frontend.home' , compact('sliders','destinations','testimonials'));
     }
 }

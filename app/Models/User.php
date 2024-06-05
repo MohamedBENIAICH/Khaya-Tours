@@ -41,4 +41,19 @@ class User extends Authenticatable
     public function roles() {
         return $this->belongsToMany(Role::class, 'role_user');
     }
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class, 'client_id');
+    }
+
+    public function payements()
+    {
+        return $this->hasMany(Booking::class, 'client_id');
+    }
+
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class, 'user_id');
+    }
 }
